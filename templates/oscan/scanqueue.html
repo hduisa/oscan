@@ -2,9 +2,73 @@
   <div class="navbar-inner">
     <a class="brand" href="#">Scan Queue</a>
     <ul class="nav" style="float:right">
-      <li class="active"><a href="#">Scan Queue</a></li>
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
+      <p>
+      	<a href="#myModal" class="btn btn-primary" data-toggle="modal">New Scan</a>
+      </p>
     </ul>
+  </div>
+</div>
+
+<div class="container" id="secondbody">
+	<table class="table table-striped">
+	  <thead>
+	    <tr>
+	      <th>
+	      	<label class="checkbox">
+      			<input type="checkbox">
+    		</label>
+	      </th>
+	      <th>Name</th>
+	      <th>Last Updated</th>
+	      <th>Status</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td>
+	      	<label class="checkbox">
+      			<input type="checkbox">
+    		</label>
+	      </td>
+	      <td>Tsg123</td>
+	      <td>May 29, 2013 14:54:54</td>
+	      <td>
+	      	<a href="#" class="btn btn-primary btn-mini btn-success">Completed<a>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+	      	<label class="checkbox">
+      			<input type="checkbox">
+    		</label>
+	      </td>
+	      <td>Tsg123</td>
+	      <td>May 29, 2013 14:54:54</td>
+	      <td>
+	      	<a href="#" class="btn btn-primary btn-mini btn-danger">--Running-<a>
+	      </td>
+	    </tr>
+	  </tbody>
+	</table>
+</div>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">New Scan</h3>
+  </div>
+  <div class="modal-body">
+    <p>
+    	<div class="input-prepend">
+		  <span class="add-on">Target</span>
+		  <input class="span5" id="prependedInput" type="text" placeholder="目标站点">
+		</div>
+    </p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">cancel</button>
+    <button class="btn btn-primary">Apply</button>
   </div>
 </div>
