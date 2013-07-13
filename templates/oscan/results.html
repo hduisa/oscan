@@ -2,9 +2,72 @@
   <div class="navbar-inner">
     <a class="brand" href="#">Results</a>
     <ul class="nav" style="float:right">
-      <li class="active"><a href="#">Results</a></li>
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
+      <li class="active"><a href="#">Results List--{{scan_id}}</a></li>
+      <li class=""><a href="/oscan/scanqueue" class="back" >Back</a></li>
     </ul>
   </div>
 </div>
+
+<div class="container" id="secondbody">
+	<table class="table table-striped">
+	  <thead>
+	    <tr>
+	      <th>Level</th>
+	      <th>Name</th>
+	      <th>Type</th>
+	      <th>Detail</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td>
+	      	<a href="#" class="btn btn-primary btn-mini btn-info">--info--<a>
+	      </td>
+	      <td>Terminal Services Encryption Level is Medium or Low</td>
+	      <td>
+	      	Generic
+	      </td>
+	      <td>
+	      	<a href="#" class="btn-link more">More<a>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+	      	<a href="#" class="btn btn-primary btn-mini btn-danger">Danger<a>
+	      </td>
+	      <td>SSL RC4 Cipher Suites Supported</td>
+	      <td>
+	      	Sql injection
+	      </td>
+	      <td>
+	      	<a href="#" class="btn-link more">More<a>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+	      	<a href="#" class="btn btn-primary btn-mini btn-warning">medium<a>
+	      </td>
+	      <td>Terminal Services Encryption</td>
+	      <td>
+	      	Sql injection
+	      </td>
+	      <td>
+	      	<a href="#" class="btn-link more">More<a>
+	      </td>
+	    </tr>
+	  </tbody>
+	</table>
+</div>
+
+
+<script type="text/javascript">
+    $(".more").click(function(){
+      $("#mainbody").load('/oscan/bugdetail')
+    })
+
+    $(".back").click(function(){
+    	href = $(this).attr("href");
+    	$("#mainbody").load(href);
+    	return false;
+    })
+</script>
