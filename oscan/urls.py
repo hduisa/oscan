@@ -13,7 +13,8 @@ urlpatterns = patterns('oscan.views',
 
     url(r'^$', 'main'),
     url(r'^scanqueue/$', 'scanqueue'),
-    url(r'^results/$', 'results'),
+    url(r'^(?P<scan_id>\d+)/results/$', 'results'),
     url(r'^settings/$', 'settings'),
+    url(r'^bugdetail/$', 'bugdetail'),
 )
 
