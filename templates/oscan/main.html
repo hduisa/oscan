@@ -1,0 +1,44 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Oscanner</title>
+	<meta name="description" content="Ocdn内嵌扫描器">
+	<meta name="author" content="[monster,shine,H.shao,Miibotree,wd,jzw，+Man">
+	<link href="{% static "bootstrap/css/bootstrap.min.css" %}" rel="stylesheet" media="screen">
+</head>
+<body>
+  <div class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar-inner">
+      <!-- Be sure to leave the brand out there if you want it shown -->
+      <a class="brand" href="/oscan">Ocdn内嵌扫描器</a>
+      <!-- 功能列表-->
+      <ul class="nav">
+        <li class="active" id="scanqueue"><a href="#">Scan Queue</a></li>
+        <li><a href="#" id="results">Results</a></li>
+        <li><a href="#" id="settings">Settings</a></li>
+      </ul>     
+    </div>
+  </div>
+
+  <div class="container" id="mainbody">
+    
+  </div>
+	
+	<script src="http://code.jquery.com/jquery.js"></script>
+  <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+  <script type="text/javascript">
+    $("#mainbody").load('/oscan/scanqueue')
+
+    $("#scanqueue").click(function(){
+      $("#mainbody").load('/oscan/scanqueue')
+    })
+    $("#results").click(function(){
+      $("#mainbody").load('/oscan/results')
+    })
+    $("#settings").click(function(){
+      $("#mainbody").load('/oscan/settings')
+    })
+  </script>
+</body>
